@@ -13,8 +13,17 @@ class CreateUsersTable extends Migration
      */
     public function up()
     {
+        Schema::create('groups', function(Blueprint $table) {
+            $table->bigIncrements('id');
+            $table->string('name');
+            $table->integer('level');
+            $table->timestamps();
+        });
+
         Schema::create('users', function (Blueprint $table) {
             $table->bigIncrements('id');
+            $table->unsignedBigInteger('gid')->nullable();
+            $table->foreign('gid')->references('id')->on('groups');
             $table->string('name');
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();
@@ -31,6 +40,7 @@ class CreateUsersTable extends Migration
      */
     public function down()
     {
+        Schema::dropIfExists('groups');
         Schema::dropIfExists('users');
     }
 }
