@@ -23,7 +23,7 @@
 <div class="navbar-wrapper">
         <nav class="navbar navbar-default navbar-fixed-top navbar-expand-md" role="navigation">
             <div class="container">
-                <a class="navbar-brand" href="index.html">{{env('APP_NAME')}}</a>
+                <a class="navbar-brand" href="#page-top">{{env('APP_NAME')}}POS</a>
                 <div class="navbar-header page-scroll">
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar">
                         <i class="fa fa-bars"></i>
@@ -36,6 +36,7 @@
                         <li><a class="nav-link page-scroll" href="#contact">Contact</a></li>
                         @if(auth()->check())
                             <li><a class="nav-link" href="{{route('dashboard')}}">Dashboard</a></li>
+                            <li><a class="nav-link" href="{{route('logout')}}">Logout</a></li>
                         @else
                             <li><a class="nav-link" href="{{route('login')}}">Login</a></li>
                             <li><a class="nav-link" href="{{route('register')}}">Register</a></li>
@@ -54,15 +55,8 @@
         <div class="carousel-item active">
             <div class="container">
                 <div class="carousel-caption">
-                    <h1>We craft<br/>
-                        brands, web apps,<br/>
-                        and user interfaces<br/>
-                        we are IN+ studio</h1>
-                    <p>Lorem Ipsum is simply dummy text of the printing.</p>
-                    <p>
-                    <a class="btn btn-lg btn-primary" href="#" role="button">READ MORE</a>
-                    <a class="caption-link" href="#" role="button">Inspinia Theme</a>
-                    </p>
+                    <h1>Point of Sales</h1>
+                    <p>What is the point of sales anyway ?</p>
                 </div>
                 <div class="carousel-image wow zoomIn">
                     <img src="img/landing/laptop.png" alt="laptop"/>
@@ -75,9 +69,8 @@
         <div class="carousel-item">
             <div class="container">
                 <div class="carousel-caption blank">
-                    <h1>We create meaningful <br/> interfaces that inspire.</h1>
-                    <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam.</p>
-                    <p><a class="btn btn-lg btn-primary" href="#" role="button">Learn more</a></p>
+                    <h1>There is nothing <br />to worry about sales</h1>
+                    <p>The only thing you should worry is yourself</p>
                 </div>
             </div>
             <!-- Set background for slide in css -->
@@ -98,280 +91,24 @@
 <section id="features" class="container services">
     <div class="row">
         <div class="col-sm-3">
-            <h2>Full responsive</h2>
-            <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus.</p>
+            <h2>Inventory Management</h2>
+            <p>We have created nice inventory management, and you could customize the way you want it to be.</p>
             <p><a class="navy-link" href="#" role="button">Details &raquo;</a></p>
         </div>
         <div class="col-sm-3">
-            <h2>LESS/SASS Files</h2>
-            <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus.</p>
+            <h2>Strategic Dashboard</h2>
+            <p>We use analytical and reasonable data for our dashboard, and of course you could customize it also.</p>
             <p><a class="navy-link" href="#" role="button">Details &raquo;</a></p>
         </div>
         <div class="col-sm-3">
-            <h2>6 Charts Library</h2>
-            <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus.</p>
+            <h2>Custom Feature</h2>
+            <p>We open to custom feature, just request what do you want.</p>
             <p><a class="navy-link" href="#" role="button">Details &raquo;</a></p>
         </div>
         <div class="col-sm-3">
-            <h2>Advanced Forms</h2>
-            <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus.</p>
+            <h2>Customer Service</h2>
+            <p>We provide 24h customer service, so you should not worry too much for technical problems.</p>
             <p><a class="navy-link" href="#" role="button">Details &raquo;</a></p>
-        </div>
-    </div>
-</section>
-
-<section  class="container features">
-    <div class="row">
-        <div class="col-lg-12 text-center">
-            <div class="navy-line"></div>
-            <h1>Over 40+ unique view<br/> <span class="navy"> with many custom components</span> </h1>
-            <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. </p>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-md-3 text-center wow fadeInLeft">
-            <div>
-                <i class="fa fa-mobile features-icon"></i>
-                <h2>Full responsive</h2>
-                <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus.</p>
-            </div>
-            <div class="m-t-lg">
-                <i class="fa fa-bar-chart features-icon"></i>
-                <h2>6 Charts Library</h2>
-                <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus.</p>
-            </div>
-        </div>
-        <div class="col-md-6 text-center  wow zoomIn">
-            <img src="img/landing/perspective.png" alt="dashboard" class="img-fluid">
-        </div>
-        <div class="col-md-3 text-center wow fadeInRight">
-            <div>
-                <i class="fa fa-envelope features-icon"></i>
-                <h2>Mail pages</h2>
-                <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus.</p>
-            </div>
-            <div class="m-t-lg">
-                <i class="fa fa-google features-icon"></i>
-                <h2>AngularJS version</h2>
-                <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus.</p>
-            </div>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-lg-12 text-center">
-            <div class="navy-line"></div>
-            <h1>Discover great feautres</h1>
-            <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. </p>
-        </div>
-    </div>
-    <div class="row features-block">
-        <div class="col-lg-6 features-text wow fadeInLeft">
-            <small>INSPINIA</small>
-            <h2>Perfectly designed </h2>
-            <p>INSPINIA Admin Theme is a premium admin dashboard template with flat design concept. It is fully responsive admin dashboard template built with Bootstrap 3+ Framework, HTML5 and CSS3, Media query. It has a huge collection of reusable UI components and integrated with latest jQuery plugins.</p>
-            <a href="" class="btn btn-primary">Learn more</a>
-        </div>
-        <div class="col-lg-6 text-right wow fadeInRight">
-            <img src="img/landing/dashboard.png" alt="dashboard" class="img-fluid float-right">
-        </div>
-    </div>
-</section>
-
-<section class="features">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-12 text-center">
-                <div class="navy-line"></div>
-                <h1>Even more great feautres</h1>
-                <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. </p>
-            </div>
-        </div>
-        <div class="row features-block">
-            <div class="col-lg-3 features-text wow fadeInLeft">
-                <small>INSPINIA</small>
-                <h2>Perfectly designed </h2>
-                <p>INSPINIA Admin Theme is a premium admin dashboard template with flat design concept. It is fully responsive admin dashboard template built with Bootstrap 3+ Framework, HTML5 and CSS3, Media query. It has a huge collection of reusable UI components and integrated with latest jQuery plugins.</p>
-                <a href="" class="btn btn-primary">Learn more</a>
-            </div>
-            <div class="col-lg-6 text-right m-t-n-lg wow zoomIn">
-                <img src="img/landing/iphone.jpg" class="img-fluid" alt="dashboard">
-            </div>
-            <div class="col-lg-3 features-text text-right wow fadeInRight">
-                <small>INSPINIA</small>
-                <h2>Perfectly designed </h2>
-                <p>INSPINIA Admin Theme is a premium admin dashboard template with flat design concept. It is fully responsive admin dashboard template built with Bootstrap 3+ Framework, HTML5 and CSS3, Media query. It has a huge collection of reusable UI components and integrated with latest jQuery plugins.</p>
-                <a href="" class="btn btn-primary">Learn more</a>
-            </div>
-        </div>
-    </div>
-
-</section>
-
-<section class="timeline gray-section">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-12 text-center">
-                <div class="navy-line"></div>
-                <h1>Our workflow</h1>
-                <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. </p>
-            </div>
-        </div>
-        <div class="row features-block">
-
-            <div class="col-lg-12">
-                <div id="vertical-timeline" class="vertical-container light-timeline center-orientation">
-                    <div class="vertical-timeline-block">
-                        <div class="vertical-timeline-icon navy-bg">
-                            <i class="fa fa-briefcase"></i>
-                        </div>
-
-                        <div class="vertical-timeline-content">
-                            <h2>Meeting</h2>
-                            <p>Conference on the sales results for the previous year. Monica please examine sales trends in marketing and products. Below please find the current status of the sale.
-                            </p>
-                            <a href="#" class="btn btn-xs btn-primary"> More info</a>
-                            <span class="vertical-date"> Today <br/> <small>Dec 24</small> </span>
-                        </div>
-                    </div>
-
-                    <div class="vertical-timeline-block">
-                        <div class="vertical-timeline-icon navy-bg">
-                            <i class="fa fa-file-text"></i>
-                        </div>
-
-                        <div class="vertical-timeline-content">
-                            <h2>Decision</h2>
-                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since.</p>
-                            <a href="#" class="btn btn-xs btn-primary"> More info</a>
-                            <span class="vertical-date"> Tomorrow <br/> <small>Dec 26</small> </span>
-                        </div>
-                    </div>
-
-                    <div class="vertical-timeline-block">
-                        <div class="vertical-timeline-icon navy-bg">
-                            <i class="fa fa-cogs"></i>
-                        </div>
-
-                        <div class="vertical-timeline-content">
-                            <h2>Implementation</h2>
-                            <p>Go to shop and find some products. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's. </p>
-                            <a href="#" class="btn btn-xs btn-primary"> More info</a>
-                            <span class="vertical-date"> Monday <br/> <small>Jan 02</small> </span>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-
-        </div>
-    </div>
-
-</section>
-
-<section class="comments gray-section" style="margin-top: 0">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-12 text-center">
-                <div class="navy-line"></div>
-                <h1>What our partners say</h1>
-                <p>Donec sed odio dui. Etiam porta sem malesuada. </p>
-            </div>
-        </div>
-        <div class="row features-block">
-            <div class="col-lg-4">
-                <div class="bubble">
-                    "Uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like)."
-                </div>
-                <div class="comments-avatar">
-                    <a href="" class="float-left">
-                        <img alt="image" src="img/landing/avatar3.jpg">
-                    </a>
-                    <div class="media-body">
-                        <div class="commens-name">
-                            Andrew Williams
-                        </div>
-                        <small class="text-muted">Company X from California</small>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-lg-4">
-                <div class="bubble">
-                    "Uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like)."
-                </div>
-                <div class="comments-avatar">
-                    <a href="" class="float-left">
-                        <img alt="image" src="img/landing/avatar1.jpg">
-                    </a>
-                    <div class="media-body">
-                        <div class="commens-name">
-                            Andrew Williams
-                        </div>
-                        <small class="text-muted">Company X from California</small>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-lg-4">
-                <div class="bubble">
-                    "Uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like)."
-                </div>
-                <div class="comments-avatar">
-                    <a href="" class="float-left">
-                        <img alt="image" src="img/landing/avatar2.jpg">
-                    </a>
-                    <div class="media-body">
-                        <div class="commens-name">
-                            Andrew Williams
-                        </div>
-                        <small class="text-muted">Company X from California</small>
-                    </div>
-                </div>
-            </div>
-
-
-
-        </div>
-    </div>
-
-</section>
-
-<section class="features">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-12 text-center">
-                <div class="navy-line"></div>
-                <h1>More and more extra great feautres</h1>
-                <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. </p>
-            </div>
-        </div>
-        <div class="row justify-content-center">
-            <div class="col-lg-5 col-lg-offset-1 features-text">
-                <small>INSPINIA</small>
-                <h2>Perfectly designed </h2>
-                <i class="fa fa-bar-chart big-icon float-right"></i>
-                <p>INSPINIA Admin Theme is a premium admin dashboard template with flat design concept. It is fully responsive admin dashboard template built with Bootstrap 3+ Framework, HTML5 and CSS3, Media query. It has a huge collection of reusable UI components and integrated with.</p>
-            </div>
-            <div class="col-lg-5 features-text">
-                <small>INSPINIA</small>
-                <h2>Perfectly designed </h2>
-                <i class="fa fa-bolt big-icon float-right"></i>
-                <p>INSPINIA Admin Theme is a premium admin dashboard template with flat design concept. It is fully responsive admin dashboard template built with Bootstrap 3+ Framework, HTML5 and CSS3, Media query. It has a huge collection of reusable UI components and integrated with.</p>
-            </div>
-        </div>
-        <div class="row justify-content-center">
-            <div class="col-lg-5 col-lg-offset-1 features-text">
-                <small>INSPINIA</small>
-                <h2>Perfectly designed </h2>
-                <i class="fa fa-clock-o big-icon float-right"></i>
-                <p>INSPINIA Admin Theme is a premium admin dashboard template with flat design concept. It is fully responsive admin dashboard template built with Bootstrap 3+ Framework, HTML5 and CSS3, Media query. It has a huge collection of reusable UI components and integrated with.</p>
-            </div>
-            <div class="col-lg-5 features-text">
-                <small>INSPINIA</small>
-                <h2>Perfectly designed </h2>
-                <i class="fa fa-users big-icon float-right"></i>
-                <p>INSPINIA Admin Theme is a premium admin dashboard template with flat design concept. It is fully responsive admin dashboard template built with Bootstrap 3+ Framework, HTML5 and CSS3, Media query. It has a huge collection of reusable UI components and integrated with.</p>
-            </div>
         </div>
     </div>
 </section>
@@ -382,27 +119,29 @@
             <div class="col-lg-12 text-center">
                 <div class="navy-line"></div>
                 <h1>Contact Us</h1>
-                <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod.</p>
+                <p>If you have problem about anything and want to contact us. Here we provide the best way to contact
+                us.</p>
             </div>
         </div>
         <div class="row m-b-lg justify-content-center">
             <div class="col-lg-3 ">
                 <address>
-                    <strong><span class="navy">Company name, Inc.</span></strong><br/>
-                    795 Folsom Ave, Suite 600<br/>
-                    San Francisco, CA 94107<br/>
-                    <abbr title="Phone">P:</abbr> (123) 456-7890
+                    <strong><span class="navy">Ordsoft, Inc.</span></strong><br/>
+                    54th Senggigi Raya St, West Lombok<br/>
+                    West Nusa Tenggara, ID 83355<br/>
+                    <abbr title="Phone">P:</abbr> (+62) 831-2966-3129
                 </address>
             </div>
             <div class="col-lg-4">
                 <p class="text-color">
-                Consectetur adipisicing elit. Aut eaque, totam corporis laboriosam veritatis quis ad perspiciatis, totam corporis laboriosam veritatis, consectetur adipisicing elit quos non quis ad perspiciatis, totam corporis ea,
+                Please send us message, and wait for answer from our cs. Continue to contact our cs until your problem
+                is solved. Thank you for your kindness :)
                 </p>
             </div>
         </div>
         <div class="row">
             <div class="col-lg-12 text-center">
-                <a href="mailto:test@email.com" class="btn btn-primary">Send us mail</a>
+                <a href="mailto:cs@ordsoft.id" class="btn btn-primary">Send us mail</a>
                 <p class="m-t-sm">
                 Or follow us on social platform
                 </p>
@@ -418,7 +157,7 @@
         </div>
         <div class="row">
             <div class="col-lg-12 text-center m-t-lg m-b-lg">
-                <p><strong>&copy; 2015 Company Name</strong><br/> consectetur adipisicing elit. Aut eaque, laboriosam veritatis, quos non quis ad perspiciatis, totam corporis ea, alias ut unde.</p>
+                <p><strong>&copy; 2020 Ordsoft</strong><br/> Specialized to make your dream become true</p>
             </div>
         </div>
     </div>

@@ -22,4 +22,8 @@ Route::prefix('auth')->group(function() {
 
 Route::get('dashboard', ['uses' => 'DashboardController@page', 'as' => 'dashboard']);
 Route::get('profile', ['uses' => 'DashboardController@profile', 'as' => 'profile']);
-Route::get('inventory', ['uses' => 'DashboardController@inventory', 'as' => 'inventory']);
+Route::prefix('inventory')->group(function() {
+    Route::get('stock_management', ['uses' => 'InventoryController@stock_management', 'as' => 'stock-management']);
+    Route::get('track_order', ['uses' => 'InventoryController@track_order', 'as' => 'track-order']);
+    Route::get('requests', ['uses' => 'InventoryController@requests', 'as' => 'requests']);
+});

@@ -12,14 +12,16 @@ class DashboardController extends Controller
     }
 
     public function page(Request $request) {
-        return view('dashboard');
+        $obj = array(
+            'title' => 'Dashboard'
+        );
+        return view('dashboard', $obj);
     }
 
     public function profile(Request $request) {
-        return view('profile');
-    }
-
-    public function inventory(Request $request) {
-        return view('inventory');
+        $obj = array(
+            'title' => 'Profile'
+        );
+        return view('profile', $obj);
     }
 }
