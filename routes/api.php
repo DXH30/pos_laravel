@@ -16,3 +16,11 @@ use Illuminate\Http\Request;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+Route::prefix('inventory')->group(function() {
+    Route::delete('stock_management/hapus', ['uses' => 'InventoryController@deleteStock', 'as' => 'delete-stock']);
+    Route::prefix('track_order')->group(function() {
+        Route::get('product', ['uses' => 'API\InventoryController@getStock', 'as' => 'api-get-stock']);
+        Route::get('product/{id}', ['uses' => 'API\InventoryController@getStock', 'as' => 'api-get-stock']);
+    });
+});
